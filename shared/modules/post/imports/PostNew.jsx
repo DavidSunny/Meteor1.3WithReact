@@ -36,7 +36,7 @@ const PostNew = React.createClass({
           Content: <input type="text" name="content"/><br/>
           <input type="submit"/>
         </form>
-        <button onClick={(e) => this.context.router.goBack()}>뒤로가기</button>
+        <button onClick={(e) => this.context.router.goBack()}>Go Back</button>
       </div>
     )
   }
