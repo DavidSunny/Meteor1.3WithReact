@@ -30,7 +30,11 @@ Meteor.startup(function(){
     rootElement.setAttribute('id', 'app-container');
     document.body.appendChild(rootElement);
 
-     //Render app into root div
+    const serverContainer = document.getElementById('app-container-for-SSR');
+    if (serverContainer) {
+      serverContainer.setAttribute('class', 'invisible');
+    }
+
     ReactDOM.render(RouterWrapper, rootElement);
   }
 
@@ -50,12 +54,12 @@ Meteor.startup(function(){
 
     const clientOptions = {
       rootElementType: 'div',
-      rootElement: 'app-container'
+      rootElement: 'app-container-for-SSR'
     };
 
     const serverOptions = {};
 
-    //ReactRouterSSR.Run(RoutesWrapper, clientOptions, serverOptions);
+    ReactRouterSSR.Run(RoutesWrapper, clientOptions, serverOptions);
   }
 });
 

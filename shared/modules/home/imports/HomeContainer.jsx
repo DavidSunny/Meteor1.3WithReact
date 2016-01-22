@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Constants } from '../../../imports/constants.jsx'
 
 const HomeContainer = React.createClass({
-  displayName: 'Keycode-HomeContainer',
+  displayName: `${Constants.prefix || ''}HomeContainer`,
 
   render() {
     return (

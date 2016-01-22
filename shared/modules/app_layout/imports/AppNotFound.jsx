@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Constants } from '../../../imports/constants.jsx'
 
 const AppNotFound = React.createClass({
+  displayName: `${Constants.prefix || ''}AppNotFound`,
+
   render() {
     return (
       <div>

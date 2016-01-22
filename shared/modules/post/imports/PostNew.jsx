@@ -1,7 +1,8 @@
 import React from 'react'
+import { Constants } from '../../../imports/constants.jsx'
 
 const PostNew = React.createClass({
-  displayName: 'PostNew',
+  displayName: `${Constants.prefix || ''}PostNew`,
 
   contextTypes: {
     router: React.PropTypes.object.isRequired

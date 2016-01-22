@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Post_Collection } from '../model/imports/post_model.jsx'
+import { Constants } from '../../../imports/constants.jsx'
 
 const ListItem = React.createClass({
+  displayName: `${Constants.prefix || ''}ListItem${Constants.suffix || ''}`,
+
   render() {
     const item = this.props.item;
     if (! item) return null;
@@ -17,7 +20,7 @@ const ListItem = React.createClass({
 });
 
 const PostContainer = React.createClass({
-  displayName: 'Keycode-PostContainer',
+  displayName: `${Constants.prefix || ''}PostContainer`,
 
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -42,12 +45,14 @@ const PostContainer = React.createClass({
   },
 
   renderList() {
-    return this.data.list.map((item) => (
-      <ListItem key={item._id} item={item} />
+    return this.data.list.map((item, i) => (
+      <ListItem key={item._id} item={item} sequence={'_'+i}/>
     ));
   },
 
   render() {
+    console.log('this.data.loading: ', this.data.loading);
+    
     if (this.data.loading) return null;
 
     console.log('this.data.list: ', this.data.list);

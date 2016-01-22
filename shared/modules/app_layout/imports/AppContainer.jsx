@@ -1,7 +1,8 @@
 import React from 'react';
+import { Constants } from '../../../imports/constants.jsx'
 
 const AppContainer = React.createClass({
-  displayName: 'Keycode-AppContainer',
+  displayName: `${Constants.prefix || ''}AppContainer`,
 
   render() {
     return (

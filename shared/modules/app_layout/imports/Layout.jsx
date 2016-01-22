@@ -1,7 +1,8 @@
 import React from 'react';
+import { Constants } from '../../../imports/constants.jsx'
 
 const Layout = React.createClass({
-  displayName: 'Keycode-Layout',
+  displayName: `${Constants.prefix || ''}Layout`,
 
   render() {
     return (
