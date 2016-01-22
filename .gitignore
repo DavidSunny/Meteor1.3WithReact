@@ -1,2 +1,6 @@
+.idea
 .meteor/local
 .meteor/meteorite
+node_modules
+
+.DS_Store
