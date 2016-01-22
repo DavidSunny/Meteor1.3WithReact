@@ -12,8 +12,8 @@ const ListItem = React.createClass({
 
     return (
       <li>
-        <p>제목: {item.title}</p>
-        <p>내용: {item.content}</p>
+        <p>Title: {item.title}</p>
+        <p>Content: {item.content}</p>
       </li>
     )
   }
@@ -59,7 +59,7 @@ const PostContainer = React.createClass({
 
     return (
       <div>
-        <Link to="/post/new">글쓰기</Link>
+        <Link to="/post/new">Write</Link>
         <h1>This is Post Container</h1>
         <a href="/home" onClick={this.handlePush}>Home</a>
         <ul>
