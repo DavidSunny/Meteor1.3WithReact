@@ -1,8 +1,9 @@
 # Execution
-: Just Open Terminal and Issue `meteor`
+: Just Open Terminal and Issue `meteor` and then open an Internet browser and type `localhost:3000' on address bar.
 
 # Todo
-:  ReactRouter SSR(Now, there are some bugs.)
+- update, delete(current only post insert feature works)
+- ReactRouter SSR(Now, there are some bugs.)
 (from https://github.com/thereactivestack/meteor-react-router-ssr/)
 
 ## Reference - How to install
